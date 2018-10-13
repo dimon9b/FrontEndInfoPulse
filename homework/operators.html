@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operators</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	let games = [
+		'WOT'
+		,'Dota'
+		,'WoW'
+		,'Lineage'
+	];
+	let genre ={
+		'strategy': [
+			'Civilization'
+			,'Total War'
+			,'Age of Empires'
+		]
+		,'MMORPG': [
+			'WOT'
+			,'WoW'
+			,'Eve Online'
+		]
+		,'racing': [
+			'NFS'
+			,'FlatOut'
+			,'Blur'
+		]
+		,'shooter': [
+			'Call Of Duty'
+			,'Battlefield'
+			,'Counter Strice'
+		]
+	};
+
+	console.log('Показать список игр',games);
+	console.log('Показать вторую игру из списка', games[1]);
+	// games.1;
+	console.log('Показать списки игр по жанрам', genre);
+	console.log('Показать список игр по жанру racing', genre['racing']);
+	console.log('Показать список игр по жанру MMORPG', genre.MMORPG);
+
+	// =====================================
+
+	let x = 18;
+	x += 3;
+	x -= 3;
+	x *= 3;
+	x /= 3;
+	x %= 4;
+
+	// =========================================================
+
+
+	let a = 10,
+			b = 20;
+
+	a++; console.log(a);
+	b--; console.log(b);
+	--b; console.log(b);
+	++a; console.log(a);
+
+
+	let plain = 'Подача самолета ',
+			plain_number = 'T038',
+			on = ' на ',
+			gates = ' ворота',
+			gates_number = 'пятые';
+
+	plain_info = plain + plain_number;
+	gates_info = gates_number + gates;
+	plain_info += on + gates_info;
+	console.log(plain_info);
+
+	let soup = 'borsh',
+			food = 'potato',
+			state = 'hot',
+			type = 'first';
+
+	let whatIEatNow = ((state == 'hot' && type == 'first') ? 'borsh' : 'potato');
+	let whatIEatThen = ((state == 'hot' && type == 'second') ? 'borsh' : 'potato');
+	console.log(whatIEatNow);
+	console.log(whatIEatThen);
+</script>
+</html>

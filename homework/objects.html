@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	class Hamburger {
+		constructor (sSize, oOtherProperties){
+			oOtherProperties = oOtherProperties || {};
+			this.size = sSize;
+			this.stuffing = [];
+			this.price = 0;
+			this.calories = 0;
+			this.package = oOtherProperties.package || '';
+			this.color = oOtherProperties.color || '';
+		}
+
+		getPrice (){
+			console.log('Hamburger\'s price is ' + this.price + ' hrn');
+		}
+
+		getCalories (){
+			console.log('Hamburger\'s calories is ' + this.calories + ' kall');
+		}
+
+		getStuffing (){
+			console.log('Hamburger\'s stuffing is ' + this.stuffing);
+		}
+
+		getSize () {
+			if (this.stuffing.length > 3) {
+				this.size = 'big';
+			} else {
+				this.size = 'default';
+			}
+			console.log('Hamburger\'s size is ' + this.size);
+		}
+
+		addToping (topping) {
+			switch(topping) {
+				case 'cheese': 
+					this.price += 10;
+					this.calories += 200;
+					this.stuffing.push(topping);
+					break;
+				case 'potato': 
+					this.price += 15;
+					this.calories += 300;
+					this.stuffing.push(topping);
+					break;
+				case 'tomato': 
+					this.price += 20;
+					this.calories += 100;
+					this.stuffing.push(topping);
+					break;
+				default: 
+					alert('Unknown topping');
+			}
+		}
+	}
+
+	let myHamburger = new Hamburger('default', {'package': 'cartoon', 'color': 'black'});
+
+
+	class Hamster {
+		constructor (sName, oOtherProperties) {
+			oOtherProperties = oOtherProperties || {};
+			this.name = sName; // может быть undefined
+			this.age = '' || oOtherProperties.age;
+			this.size = oOtherProperties.size || ''; // если два false, то берет значение ВТОРОГО false
+		}
+
+		whatIsYourName () {
+			console.log(this.name ? `My name is ${this.name}` : 'I don\'t know my name...(');
+		}
+	}
+
+	let Hamster1 = new Hamster('Butch');
+	let Hamster2 = new Hamster('', {'age': '1', 'size': '500'});
+	let Hamster3 = new Hamster();
+
+	// Если передавать имя через обязательный параметр
+
+</script>
+</html>

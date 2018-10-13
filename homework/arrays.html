@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	let shopping_list = [
+		'milk',
+		'coffee',
+		'tea',
+		'cookies'
+	],
+	shopping_result = null
+
+													console.log('Вывод списка покупок', shopping_list);
+													console.log('Вывод второго элемента списка покупок', shopping_list[1]);
+	shopping_list[2] = 'meat';						console.log('Замена третьего элемента списка покупок на мясо', shopping_list);
+	shopping_result = shopping_list.splice(2,1);	console.log('Удаление третьего пункта из списка покупок', shopping_list, 'результат', shopping_result);
+	shopping_result = delete shopping_list[1];		console.log('Удаление второго пункта из списка покупок без сдвига', shopping_list, 'результат', shopping_result);
+
+	let JSMOperators = {
+		'050': 'MTS',
+		'063': 'Life',
+		'066': 'MTS',
+		'067': 'Kyivstar',
+		'073': 'Life',
+		'093': 'Life',
+		'095': 'MTS',
+		'096': 'Kyivstar',
+		'099': 'MTS',
+		call: function(){}
+	},
+	JSM_result = null;
+																											console.log('Вывод всех операторов связи', JSMOperators);
+																											console.log('Вывод оператора связи с начальным номером 073', JSMOperators['073']);
+	JSMOperators['067'] = 'Kievstar';																		console.log('Замена оператора \'067\' c Kyivstar на Kievstar', JSMOperators);
+	for (var value in JSMOperators)	{if (JSMOperators[value] == 'MTS') {JSMOperators[value] = 'Vodafone'}};	console.log('Замена всех названий MTS на Vodafone', JSMOperators);
+	JSM_result = delete JSMOperators['067'];																console.log('Удаление оператора \'067\' без сдвига', JSMOperators, 'результат', JSM_result);
+
+
+</script>
+</html>

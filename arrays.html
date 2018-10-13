@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	let todolist = [
+		'a'
+		,'b'
+		,'c'
+		,'d'
+	]
+	, result = null;
+
+													console.log('показать список задач', todolist);
+													console.log('показать второй элемент списка', todolist[1]);
+	todolist[1] = 'enjoy breakfast';				console.log('Замена второй задачи', todolist);
+	result = todolist.splice(2,1);					console.log('Удаление третьего элемента задачи со сдвигом', todolist, 'результат', result);
+	result = delete todolist[1];					console.log('Удаление второго элемента задачи без сдвига', todolist, 'результат', result);
+
+	let countries = {
+		'ua': 'Ukraine'
+		,'by': 'Belarus'
+		,'de': 'Germany'
+		,myFunc: function(){}
+	}
+	, changed_countries = null;
+
+													console.log('Показать значение аббревиатур', countries);
+													console.log('Показать значение аббревиатуры ua', countries['ua']);
+	countries['ua'] = 'Україна';					console.log('Замена значения аббревиатуры ua', countries);
+	changed_countries = delete countries['de'];		console.log('Удаление аббревиатуры de без сдвига', countries, 'результат', changed_countries);
+</script>
+</html>
